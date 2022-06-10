@@ -47,9 +47,8 @@ namespace IndianStateCensusAnalyzer
             CensusCustomException Exception = Assert.Throws<CensusCustomException>(() => censusAnalyzer.CensusData(path + InvalidDelimiter, "State,Population,AreaInSqKm,DensityPerSqKm"));
             Assert.AreEqual(CensusCustomException.ExceptionType.Invalid_Delimeter, Exception);
         }
-        /// <summary>
-        /// TC1.5:-Check header is correct or not
-        /// </summary>
+
+        // TC 1.5: Given the State Census CSV File when correct but csv header incorrect Returns a custom Exception
         [Test]
         public void GivenIncorrectHeader_ReturnsCustomException()
         {

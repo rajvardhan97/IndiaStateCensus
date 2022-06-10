@@ -2,8 +2,17 @@
 {
     public class CensusStateCode
     {
-        public CensusStateCode(string v1, string v2, string v3, string v4)
+        public string SerialNumber;
+        public string StateName;
+        public string Tin;
+        public string StateCode;
+
+        public CensusStateCode(string serialnumber, string statename, string tin, string statecode)
         {
+            this.SerialNumber = serialnumber;
+            this.StateName = statename;
+            this.Tin = tin;
+            this.StateCode = statecode;
         }
     }
 }
